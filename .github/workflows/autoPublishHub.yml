@@ -20,4 +20,4 @@ jobs:
           context: .
           push: true
           tags: |
-            ${{github.repository}}:latest
+            ${{github.repository_nwo}}:latest
