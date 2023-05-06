@@ -1,0 +1,31 @@
+{
+  "log": {
+    "access": "none",
+    "loglevel": "error"
+  },
+  "inbounds": [
+    {
+      "port": 8080,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "${uuid}",
+            "alterId": 0
+          }
+        ]
+      },
+      "streamSettings": {
+        "network":"ws",
+        "wsSettings": {
+          "path": "/${ws_path}"
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom"
+    }
+  ]
+}
